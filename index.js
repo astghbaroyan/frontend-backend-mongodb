@@ -10,6 +10,9 @@ app.use(json);
     await mongoose.connect('mongodb://localhost:27017/contacts');
 })();
 
+const staticFiles = express.static('./frontend');
+
+
 app.listen(port, ()=> console.log(`Server is listening port ${port}`));
 
 app.use(contactRouter);
